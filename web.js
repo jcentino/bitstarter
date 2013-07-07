@@ -8,8 +8,8 @@ app.get('/', function(request, response) {
   fs.readFileSync(inputFile, function (err, data) {
       if (err) throw err;
 	console.log(data);
-      //var buffer = new Buffer(data, "utf-8");
-      response.send(data.toString());
+      var buffer = new Buffer(data, "utf-8");
+      response.send(buffer.toString());
   });
 });
 

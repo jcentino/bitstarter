@@ -1,14 +1,15 @@
 var express = require('express');
 var fs = require('fs');
 var app = express.createServer(express.logger());
+var inputFile = 'index.html';
 
 app.get('/', function(request, response) {
   //response.send('Hello World 2!');
-  fs.readFile('index.html', function (err, data) {
+  fs.readFileSync(inputFile, function (err, data) {
       if (err) throw err;
 	console.log(data);
-      var buffer = new Buffer(data, "utf-8");
-      response.send(buffer.toString());
+      //var buffer = new Buffer(data, "utf-8");
+      response.send(data.toString());
   });
 });
 

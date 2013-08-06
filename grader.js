@@ -25,6 +25,7 @@ var fs = require('fs');
 var program = require('commander');
 var cheerio = require('cheerio');
 var rest = require('restler');
+var util = require('util');
 var HTMLFILE_DEFAULT = "index.html";
 var CHECKSFILE_DEFAULT = "checks.json";
 var URL_DEFAULT = "http://fast-taiga-5834.herokuapp.com/";
@@ -50,14 +51,23 @@ var loadChecks = function(checksfile) {
     return JSON.parse(fs.readFileSync(checksfile));
 };
 
-var checkHtmlFile = function(htmlfile, checksfile, url) {
-    console.log("htmlfile [" + htmlfile + "], checksfile [" + checksfile + "], url [" + url + "]");
+var returnHtmlString = function() {
+    var htmlString = function(result, response) {
+	if (result instanceof Error) {
+	    console.error('Error' + util.format(response.message));    
+	}
+	return result;
+    }
+}
 
+var checkHtmlFile = function(htmlfile, checksfile, url) {
     if (htmlfile != undefined && htmlfile.length > 0) {
         $ = cheerioHtmlFile(htmlfile);
     }
     else if (url != undefined && url.length > 0) {
-	$ = cheerioUrlFile(rest.get(url));
+        var result = rest.get(url).on('complete', returnHtmlString);
+        console.log("result [" + result + "]");
+	$ = cheerioUrlFile(result);   
     }
     var checks = loadChecks(checksfile).sort();
     var out = {};
@@ -80,6 +90,7 @@ if(require.main == module) {
         .option('-f, --file <html_file>', 'Path to index.html')
         .option('-u, --url <url>', 'URL')
         .parse(process.argv);
+    //console.log(process.argv);
     var checkJson = checkHtmlFile(program.file, program.checks, program.url);
     var outJson = JSON.stringify(checkJson, null, 4);
     console.log(outJson);

@@ -1,943 +1,302 @@
 <!DOCTYPE html>
-<html>
-  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>bitstarter/index.html at master · jcentino/bitstarter</title>
-    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
-    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
-    <link rel="logo" type="image/svg" href="https://github-media-downloads.s3.amazonaws.com/github-logo.svg" />
-    <meta property="og:image" content="https://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png">
-    <meta name="hostname" content="fe13.rs.github.com">
-    <link rel="assets" href="https://github.global.ssl.fastly.net/">
-    <link rel="xhr-socket" href="/_sockets" />
-    
-    
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My First Bitstarter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
+          rel="stylesheet" type="text/css">
+    <style type="text/css">
 
+      /* Large desktop */
+      @media (min-width: 980px) { 
+        body {
+         padding-top: 60px;
+        }
+       .linediv-l {
+         border-right: 1px white solid;
+        }
+       .linediv-r {
+         border-left: 1px white solid;
+       }
+      }
 
-    <meta name="msapplication-TileImage" content="/windows-tile.png" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="selected-link" value="repo_source" data-pjax-transient />
-    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="1963014" name="octolytics-actor-id" /><meta content="jcentino" name="octolytics-actor-login" /><meta content="b5be2bffe06bb9fa1b3bfcac3a7148777be5e612e65346910daef815080c79e2" name="octolytics-actor-hash" />
+      /* Landscape phones and down */
+      @media (max-width: 480px) { 
+       .copy {
+         padding: 2.5% 10%;
+       }
+       .linediv-l {
+         border-bottom: 1px white solid;
+       }
+       .linediv-r {
+         border-top: 1px white solid;
+       }
+      }
 
-    
-    
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      /* All form factors */
 
-    <meta content="authenticity_token" name="csrf-param" />
-<meta content="qvpsyv0fLesHMAVlwLtmxc8wo2xsFcu5remcXZF1nNk=" name="csrf-token" />
+      /* Main body and headings */
+      body{
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      }
+      .heading, .subheading {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        text-align: center;
+      }
+      p.lead {
+        padding-top: 1.5%;
+        font-size: 24px;
+        line-height: 30px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 24px;
+      }
 
-    <link href="https://github.global.ssl.fastly.net/assets/github-8921d913c104b05dbca482140b50a4899d808da0.css" media="all" rel="stylesheet" type="text/css" />
-    <link href="https://github.global.ssl.fastly.net/assets/github2-aa63a9702e1366e95f35d477257b39be940ff53c.css" media="all" rel="stylesheet" type="text/css" />
-    
+      /* Video pitch and Action */
+      .pitch {
+        padding: 2.5% 0%;
+      }
+      .order {
+        padding: 2% 0%;
+      }
+      .actions {
+        background-color: #343434;
+        padding: 3% 0%;
+      }
+      .video, .thermometer, .order, .social, .statistics {
+        text-align: center;
+      }
+      .statistics h3, .statistics p {
+        color: white;
+      }
 
-
-      <script src="https://github.global.ssl.fastly.net/assets/frameworks-e8054ad804a1cf9e9849130fee5a4a5487b663ed.js" type="text/javascript"></script>
-      <script src="https://github.global.ssl.fastly.net/assets/github-4e41d7724d8be5d39a03f8e6bf2d50a4414b9649.js" type="text/javascript"></script>
-      
-      <meta http-equiv="x-pjax-version" content="2e2c3f3588b9b3a98ed45f34834b2e61">
-
-        <link data-pjax-transient rel='permalink' href='/jcentino/bitstarter/blob/4c7ba9b3d42fd88732cce56171f80cc041fbe334/index.html'>
-  <meta property="og:title" content="bitstarter"/>
-  <meta property="og:type" content="githubog:gitrepository"/>
-  <meta property="og:url" content="https://github.com/jcentino/bitstarter"/>
-  <meta property="og:image" content="https://github.global.ssl.fastly.net/images/gravatars/gravatar-user-420.png"/>
-  <meta property="og:site_name" content="GitHub"/>
-  <meta property="og:description" content="Contribute to bitstarter development by creating an account on GitHub."/>
-
-  <meta name="description" content="Contribute to bitstarter development by creating an account on GitHub." />
-
-  <meta content="1120555" name="octolytics-dimension-user_id" /><meta content="jcentino" name="octolytics-dimension-user_login" /><meta content="11218021" name="octolytics-dimension-repository_id" /><meta content="jcentino/bitstarter" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="true" name="octolytics-dimension-repository_is_fork" /><meta content="5447903" name="octolytics-dimension-repository_parent_id" /><meta content="heroku/node-js-sample" name="octolytics-dimension-repository_parent_nwo" /><meta content="5447903" name="octolytics-dimension-repository_network_root_id" /><meta content="heroku/node-js-sample" name="octolytics-dimension-repository_network_root_nwo" />
-  <link href="https://github.com/jcentino/bitstarter/commits/master.atom" rel="alternate" title="Recent Commits to bitstarter:master" type="application/atom+xml" />
-
+      /* Marketing Copy and Footer */
+      .copy {
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        text-align: justify;
+      }
+      .asset {
+        padding: 2.5% 0%;
+      }
+      .footer {
+        color: #cccccc;
+        text-align: center;
+      }
+      .footer p {
+        font-size: 11px;
+      }
+      .footer a {
+        color: #ccccff;
+      }
+    </style>
   </head>
+  <body>
 
-
-  <body class="logged_in page-blob windows vis-public fork env-production ">
-
-    <div class="wrapper">
-      
-      
-      
-
-
-      <div class="header header-logged-in true">
-  <div class="container clearfix">
-
-    <a class="header-logo-invertocat" href="https://github.com/">
-  <span class="mega-octicon octicon-mark-github"></span>
-</a>
-
-    <div class="divider-vertical"></div>
-
-      <a href="/notifications" class="notification-indicator tooltipped downwards" title="You have no unread notifications">
-    <span class="mail-status all-read"></span>
-  </a>
-  <div class="divider-vertical"></div>
-
-
-      <div class="command-bar js-command-bar  in-repository">
-          <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
-
-<input type="text" data-hotkey="/ s" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
-    
-    data-username="jcentino"
-      data-repo="jcentino/bitstarter"
-      data-branch="master"
-      data-sha="b673f363eb3566726f13e36d5d69acd6a67582ee"
-  >
-
-    <input type="hidden" name="nwo" value="jcentino/bitstarter" />
-
-    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
-      <span class="minibutton select-menu-button js-menu-target">
-        <span class="js-select-button">This repository</span>
-      </span>
-
-      <div class="select-menu-modal-holder js-menu-content js-navigation-container">
-        <div class="select-menu-modal">
-
-          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
-            <span class="select-menu-item-icon octicon octicon-check"></span>
-            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
-            <div class="select-menu-item-text js-select-button-text">This repository</div>
-          </div> <!-- /.select-menu-item -->
-
-          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
-            <span class="select-menu-item-icon octicon octicon-check"></span>
-            <input type="radio" name="search_target" value="global" />
-            <div class="select-menu-item-text js-select-button-text">All repositories</div>
-          </div> <!-- /.select-menu-item -->
-
+    <!-- Mobile-friendly navbar adapted from example. -->
+    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar"
+                  data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Bitstarter</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
-  <span class="octicon help tooltipped downwards" title="Show command bar help">
-    <span class="octicon octicon-question"></span>
-  </span>
-
-
-  <input type="hidden" name="ref" value="cmdform">
-
-</form>
-        <ul class="top-nav">
-            <li class="explore"><a href="/explore">Explore</a></li>
-            <li><a href="https://gist.github.com">Gist</a></li>
-            <li><a href="/blog">Blog</a></li>
-          <li><a href="https://help.github.com">Help</a></li>
-        </ul>
-      </div>
-
-    
-
-  
-
-    <ul id="user-links">
-      <li>
-        <a href="/jcentino" class="name">
-          <img height="20" src="https://secure.gravatar.com/avatar/b7405724540d25844b89c2d09fbc5c6e?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="20" /> jcentino
-        </a>
-      </li>
-
-        <li>
-          <a href="/new" id="new_repo" class="tooltipped downwards" title="Create a new repo" aria-label="Create a new repo">
-            <span class="octicon octicon-repo-create"></span>
-          </a>
-        </li>
-
-        <li>
-          <a href="/settings/profile" id="account_settings"
-            class="tooltipped downwards"
-            aria-label="Account settings "
-            title="Account settings ">
-            <span class="octicon octicon-tools"></span>
-          </a>
-        </li>
-        <li>
-          <a class="tooltipped downwards" href="/logout" data-method="post" id="logout" title="Sign out" aria-label="Sign out">
-            <span class="octicon octicon-log-out"></span>
-          </a>
-        </li>
-
-    </ul>
-
-
-<div class="js-new-dropdown-contents hidden">
-  
-
-<ul class="dropdown-menu">
-  <li>
-    <a href="/new"><span class="octicon octicon-repo-create"></span> New repository</a>
-  </li>
-  <li>
-    <a href="/organizations/new"><span class="octicon octicon-organization"></span> New organization</a>
-  </li>
-
-
-
-    <li class="section-title">
-      <span title="jcentino/bitstarter">This repository</span>
-    </li>
-    <li>
-      <a href="/jcentino/bitstarter/issues/new"><span class="octicon octicon-issue-opened"></span> New issue</a>
-    </li>
-</ul>
-
-</div>
-
-
-    
-  </div>
-</div>
-
-      
-
-      
-
-
-
-
-          <div class="site" itemscope itemtype="http://schema.org/WebPage">
-    
-    <div class="pagehead repohead instapaper_ignore readability-menu">
-      <div class="container">
-        
-
-<ul class="pagehead-actions">
-
-    <li class="subscription">
-      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="qvpsyv0fLesHMAVlwLtmxc8wo2xsFcu5remcXZF1nNk=" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="11218021" />
-
-    <div class="select-menu js-menu-container js-select-menu">
-        <a class="social-count js-social-count" href="/jcentino/bitstarter/watchers">
-          2
-        </a>
-      <span class="minibutton select-menu-button with-count js-menu-target">
-        <span class="js-select-button">
-          <span class="octicon octicon-eye-unwatch"></span>
-          Unwatch
-        </span>
-      </span>
-
-      <div class="select-menu-modal-holder">
-        <div class="select-menu-modal subscription-menu-modal js-menu-content">
-          <div class="select-menu-header">
-            <span class="select-menu-title">Notification status</span>
-            <span class="octicon octicon-remove-close js-menu-close"></span>
-          </div> <!-- /.select-menu-header -->
-
-          <div class="select-menu-list js-navigation-container">
-
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <div class="select-menu-item-text">
-                <input id="do_included" name="do" type="radio" value="included" />
-                <h4>Not watching</h4>
-                <span class="description">You only receive notifications for discussions in which you participate or are @mentioned.</span>
-                <span class="js-select-button-text hidden-select-button-text">
-                  <span class="octicon octicon-eye-watch"></span>
-                  Watch
-                </span>
-              </div>
-            </div> <!-- /.select-menu-item -->
-
-            <div class="select-menu-item js-navigation-item selected">
-              <span class="select-menu-item-icon octicon octicon octicon-check"></span>
-              <div class="select-menu-item-text">
-                <input checked="checked" id="do_subscribed" name="do" type="radio" value="subscribed" />
-                <h4>Watching</h4>
-                <span class="description">You receive notifications for all discussions in this repository.</span>
-                <span class="js-select-button-text hidden-select-button-text">
-                  <span class="octicon octicon-eye-unwatch"></span>
-                  Unwatch
-                </span>
-              </div>
-            </div> <!-- /.select-menu-item -->
-
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <div class="select-menu-item-text">
-                <input id="do_ignore" name="do" type="radio" value="ignore" />
-                <h4>Ignoring</h4>
-                <span class="description">You do not receive any notifications for discussions in this repository.</span>
-                <span class="js-select-button-text hidden-select-button-text">
-                  <span class="octicon octicon-mute"></span>
-                  Stop ignoring
-                </span>
-              </div>
-            </div> <!-- /.select-menu-item -->
-
-          </div> <!-- /.select-menu-list -->
-
-        </div> <!-- /.select-menu-modal -->
-      </div> <!-- /.select-menu-modal-holder -->
-    </div> <!-- /.select-menu -->
-
-</form>
-    </li>
-
-  <li>
-  
-<div class="js-toggler-container js-social-container starring-container ">
-  <a href="/jcentino/bitstarter/unstar" class="minibutton with-count js-toggler-target star-button starred upwards" title="Unstar this repo" data-remote="true" data-method="post" rel="nofollow">
-    <span class="octicon octicon-star-delete"></span><span class="text">Unstar</span>
-  </a>
-  <a href="/jcentino/bitstarter/star" class="minibutton with-count js-toggler-target star-button unstarred upwards " title="Star this repo" data-remote="true" data-method="post" rel="nofollow">
-    <span class="octicon octicon-star"></span><span class="text">Star</span>
-  </a>
-  <a class="social-count js-social-count" href="/jcentino/bitstarter/stargazers">0</a>
-</div>
-
-  </li>
-
-
-        <li>
-          <a href="/jcentino/bitstarter/fork" class="minibutton with-count js-toggler-target fork-button lighter upwards" title="Fork this repo" rel="nofollow" data-method="post">
-            <span class="octicon octicon-git-branch-create"></span><span class="text">Fork</span>
-          </a>
-          <a href="/jcentino/bitstarter/network" class="social-count">10,775</a>
-        </li>
-
-
-</ul>
-
-        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
-          <span class="repo-label"><span>public</span></span>
-          <span class="mega-octicon octicon-repo-forked"></span>
-          <span class="author">
-            <a href="/jcentino" class="url fn" itemprop="url" rel="author"><span itemprop="title">jcentino</span></a></span
-          ><span class="repohead-name-divider">/</span><strong
-          ><a href="/jcentino/bitstarter" class="js-current-repository js-repo-home-link">bitstarter</a></strong>
-
-          <span class="page-context-loader">
-            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-          </span>
-
-            <span class="fork-flag">
-              <span class="text">forked from <a href="/heroku/node-js-sample">heroku/node-js-sample</a></span>
-            </span>
-        </h1>
-      </div><!-- /.container -->
-    </div><!-- /.repohead -->
-
+    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
+    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
+    <!-- http://stackoverflow.com/a/12270322 -->
     <div class="container">
-
-      <div class="repository-with-sidebar repo-container ">
-
-        <div class="repository-sidebar">
-            
-
-<div class="repo-nav repo-nav-full js-repository-container-pjax js-octicon-loaders">
-  <div class="repo-nav-contents">
-    <ul class="repo-menu">
-      <li class="tooltipped leftwards" title="Code">
-        <a href="/jcentino/bitstarter" aria-label="Code" class="js-selected-navigation-item selected" data-gotokey="c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_tags repo_branches /jcentino/bitstarter">
-          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
-          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>      </li>
-
-
-      <li class="tooltipped leftwards" title="Pull Requests"><a href="/jcentino/bitstarter/pulls" aria-label="Pull Requests" class="js-selected-navigation-item js-disable-pjax" data-gotokey="p" data-selected-links="repo_pulls /jcentino/bitstarter/pulls">
-            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
-            <span class='counter'>0</span>
-            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>      </li>
-
-
-
-
-    </ul>
-    <div class="repo-menu-separator"></div>
-    <ul class="repo-menu">
-
-      <li class="tooltipped leftwards" title="Pulse">
-        <a href="/jcentino/bitstarter/pulse" aria-label="Pulse" class="js-selected-navigation-item " data-pjax="true" data-selected-links="pulse /jcentino/bitstarter/pulse">
-          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
-          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>      </li>
-
-      <li class="tooltipped leftwards" title="Graphs">
-        <a href="/jcentino/bitstarter/graphs" aria-label="Graphs" class="js-selected-navigation-item " data-pjax="true" data-selected-links="repo_graphs repo_contributors /jcentino/bitstarter/graphs">
-          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
-          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>      </li>
-
-      <li class="tooltipped leftwards" title="Network">
-        <a href="/jcentino/bitstarter/network" aria-label="Network" class="js-selected-navigation-item js-disable-pjax" data-selected-links="repo_network /jcentino/bitstarter/network">
-          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
-          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>      </li>
-
-    </ul>
-
-  </div>
-</div>
-
-            <div class="only-with-full-nav">
-              
-
-  
-
-<div class="clone-url open"
-  data-protocol-type="http"
-  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
-  <h3><strong>HTTPS</strong> clone URL</h3>
-
-  <input type="text" class="clone js-url-field"
-         value="https://github.com/jcentino/bitstarter.git" readonly="readonly">
-
-  <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/jcentino/bitstarter.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
-</div>
-
-  
-
-<div class="clone-url "
-  data-protocol-type="ssh"
-  data-url="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone">
-  <h3><strong>SSH</strong> clone URL</h3>
-
-  <input type="text" class="clone js-url-field"
-         value="git@github.com:jcentino/bitstarter.git" readonly="readonly">
-
-  <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="git@github.com:jcentino/bitstarter.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
-</div>
-
-  
-
-<div class="clone-url "
-  data-protocol-type="subversion"
-  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
-  <h3><strong>Subversion</strong> checkout URL</h3>
-
-  <input type="text" class="clone js-url-field"
-         value="https://github.com/jcentino/bitstarter" readonly="readonly">
-
-  <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/jcentino/bitstarter" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
-</div>
-
-
-
-<p class="clone-options">You can clone with
-    <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
-    <a href="#" class="js-clone-selector" data-protocol="ssh">SSH</a>,
-    <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>,
-  and <a href="https://help.github.com/articles/which-remote-url-should-i-use">other methods.</a>
-</p>
-
-
-  <a href="github-windows://openRepo/https://github.com/jcentino/bitstarter" class="minibutton sidebar-button">
-    <span class="octicon octicon-device-desktop"></span>
-    Clone in Desktop
-  </a>
-
-                <a href="/jcentino/bitstarter/archive/master.zip"
-                   class="minibutton sidebar-button"
-                   title="Download this repository as a zip file"
-                   rel="nofollow">
-                  <span class="octicon octicon-cloud-download"></span>
-                  Download ZIP
-                </a>
-            </div>
-        </div><!-- /.repository-sidebar -->
-
-        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
-          
-
-
-<!-- blob contrib key: blob_contributors:v21:f04eabd3c7faf278d2dd8e03e8e5b4d4 -->
-<!-- blob contrib frag key: views10/v8/blob_contributors:v21:f04eabd3c7faf278d2dd8e03e8e5b4d4 -->
-
-<p title="This is a placeholder element" class="js-history-link-replace hidden"></p>
-
-<a href="/jcentino/bitstarter/find/master" data-pjax data-hotkey="t" style="display:none">Show File Finder</a>
-
-<div class="file-navigation">
-  
-
-
-<div class="select-menu js-menu-container js-select-menu" >
-  <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
-    data-master-branch="master"
-    data-ref="master">
-    <span class="octicon octicon-git-branch"></span>
-    <i>branch:</i>
-    <span class="js-select-button">master</span>
-  </span>
-
-  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
-
-    <div class="select-menu-modal">
-      <div class="select-menu-header">
-        <span class="select-menu-title">Switch branches/tags</span>
-        <span class="octicon octicon-remove-close js-menu-close"></span>
-      </div> <!-- /.select-menu-header -->
-
-      <div class="select-menu-filters">
-        <div class="select-menu-text-filter">
-          <input type="text" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
+      <!-- www.google.com/fonts/specimen/Ubuntu -->
+      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
+      <div class="row-fluid heading">
+        <div class="span12">
+          <h1>Product: Development Version</h1>
         </div>
-        <div class="select-menu-tabs">
-          <ul>
-            <li class="select-menu-tab">
-              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
-            </li>
-            <li class="select-menu-tab">
-              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
-            </li>
-          </ul>
-        </div><!-- /.select-menu-tabs -->
-      </div><!-- /.select-menu-filters -->
-
-      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
-
-        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
-
-
-            <div class="select-menu-item js-navigation-item selected">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jcentino/bitstarter/blob/master/index.html" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="master" data-skip-pjax="true" rel="nofollow" title="master">master</a>
-            </div> <!-- /.select-menu-item -->
+      </div> 
+      <div class="row-fluid subheading">
+        <div class="span12">
+          <!-- Special typography from Bootstrap for lead paragraph. -->
+          <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
+          <p class="lead">One sentence description.</p>
         </div>
-
-          <div class="select-menu-no-results">Nothing to show</div>
-      </div> <!-- /.select-menu-list -->
-
-      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
-        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
-
-
-        </div>
-
-        <div class="select-menu-no-results">Nothing to show</div>
-      </div> <!-- /.select-menu-list -->
-
-    </div> <!-- /.select-menu-modal -->
-  </div> <!-- /.select-menu-modal-holder -->
-</div> <!-- /.select-menu -->
-
-  <div class="breadcrumb">
-    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/jcentino/bitstarter" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">bitstarter</span></a></span></span><span class="separator"> / </span><strong class="final-path">index.html</strong> <span class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="index.html" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
-  </div>
-</div>
-
-
-  
-  <div class="commit file-history-tease">
-    <img class="main-avatar" height="24" src="https://secure.gravatar.com/avatar/1e11e629a459a81b35dfa2bcad870b49?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
-    <span class="author"><span rel="author">Ubuntu</span></span>
-    <time class="js-relative-date" datetime="2013-07-22T14:40:21-07:00" title="2013-07-22 14:40:21">July 22, 2013</time>
-    <div class="commit-title">
-        <a href="/jcentino/bitstarter/commit/4c7ba9b3d42fd88732cce56171f80cc041fbe334" class="message" data-pjax="true" title="Customized index.html">Customized index.html</a>
-    </div>
-
-    <div class="participation">
-      <p class="quickstat"><a href="#blob_contributors_box" rel="facebox"><strong>0</strong> contributors</a></p>
-      
-    </div>
-    <div id="blob_contributors_box" style="display:none">
-      <h2 class="facebox-header">Users who have contributed to this file</h2>
-      <ul class="facebox-user-list">
-      </ul>
-    </div>
-  </div>
-
-
-<div id="files" class="bubble">
-  <div class="file">
-    <div class="meta">
-      <div class="info">
-        <span class="icon"><b class="octicon octicon-file-text"></b></span>
-        <span class="mode" title="File Mode">file</span>
-          <span>273 lines (258 sloc)</span>
-        <span>10.016 kb</span>
       </div>
-      <div class="actions">
-        <div class="button-group">
-                <a class="minibutton tooltipped leftwards"
-                   title="Clicking this button will automatically fork this project so you can edit the file"
-                   href="/jcentino/bitstarter/edit/master/index.html"
-                   data-method="post" rel="nofollow">Edit</a>
-          <a href="/jcentino/bitstarter/raw/master/index.html" class="button minibutton " id="raw-url">Raw</a>
-            <a href="/jcentino/bitstarter/blame/master/index.html" class="button minibutton ">Blame</a>
-          <a href="/jcentino/bitstarter/commits/master/index.html" class="button minibutton " rel="nofollow">History</a>
-        </div><!-- /.button-group -->
-            <a class="minibutton danger empty-icon tooltipped downwards"
-               href="/jcentino/bitstarter/delete/master/index.html"
-               title="Fork this project and delete file" data-method="post" rel="nofollow">
-            Delete
-          </a>
-      </div><!-- /.actions -->
-
-    </div>
-        <div class="blob-wrapper data type-html js-blob-data">
-      <table class="file-code file-diff">
-        <tr class="file-code-line">
-          <td class="blob-line-nums">
-            <span id="L1" rel="#L1">1</span>
-<span id="L2" rel="#L2">2</span>
-<span id="L3" rel="#L3">3</span>
-<span id="L4" rel="#L4">4</span>
-<span id="L5" rel="#L5">5</span>
-<span id="L6" rel="#L6">6</span>
-<span id="L7" rel="#L7">7</span>
-<span id="L8" rel="#L8">8</span>
-<span id="L9" rel="#L9">9</span>
-<span id="L10" rel="#L10">10</span>
-<span id="L11" rel="#L11">11</span>
-<span id="L12" rel="#L12">12</span>
-<span id="L13" rel="#L13">13</span>
-<span id="L14" rel="#L14">14</span>
-<span id="L15" rel="#L15">15</span>
-<span id="L16" rel="#L16">16</span>
-<span id="L17" rel="#L17">17</span>
-<span id="L18" rel="#L18">18</span>
-<span id="L19" rel="#L19">19</span>
-<span id="L20" rel="#L20">20</span>
-<span id="L21" rel="#L21">21</span>
-<span id="L22" rel="#L22">22</span>
-<span id="L23" rel="#L23">23</span>
-<span id="L24" rel="#L24">24</span>
-<span id="L25" rel="#L25">25</span>
-<span id="L26" rel="#L26">26</span>
-<span id="L27" rel="#L27">27</span>
-<span id="L28" rel="#L28">28</span>
-<span id="L29" rel="#L29">29</span>
-<span id="L30" rel="#L30">30</span>
-<span id="L31" rel="#L31">31</span>
-<span id="L32" rel="#L32">32</span>
-<span id="L33" rel="#L33">33</span>
-<span id="L34" rel="#L34">34</span>
-<span id="L35" rel="#L35">35</span>
-<span id="L36" rel="#L36">36</span>
-<span id="L37" rel="#L37">37</span>
-<span id="L38" rel="#L38">38</span>
-<span id="L39" rel="#L39">39</span>
-<span id="L40" rel="#L40">40</span>
-<span id="L41" rel="#L41">41</span>
-<span id="L42" rel="#L42">42</span>
-<span id="L43" rel="#L43">43</span>
-<span id="L44" rel="#L44">44</span>
-<span id="L45" rel="#L45">45</span>
-<span id="L46" rel="#L46">46</span>
-<span id="L47" rel="#L47">47</span>
-<span id="L48" rel="#L48">48</span>
-<span id="L49" rel="#L49">49</span>
-<span id="L50" rel="#L50">50</span>
-<span id="L51" rel="#L51">51</span>
-<span id="L52" rel="#L52">52</span>
-<span id="L53" rel="#L53">53</span>
-<span id="L54" rel="#L54">54</span>
-<span id="L55" rel="#L55">55</span>
-<span id="L56" rel="#L56">56</span>
-<span id="L57" rel="#L57">57</span>
-<span id="L58" rel="#L58">58</span>
-<span id="L59" rel="#L59">59</span>
-<span id="L60" rel="#L60">60</span>
-<span id="L61" rel="#L61">61</span>
-<span id="L62" rel="#L62">62</span>
-<span id="L63" rel="#L63">63</span>
-<span id="L64" rel="#L64">64</span>
-<span id="L65" rel="#L65">65</span>
-<span id="L66" rel="#L66">66</span>
-<span id="L67" rel="#L67">67</span>
-<span id="L68" rel="#L68">68</span>
-<span id="L69" rel="#L69">69</span>
-<span id="L70" rel="#L70">70</span>
-<span id="L71" rel="#L71">71</span>
-<span id="L72" rel="#L72">72</span>
-<span id="L73" rel="#L73">73</span>
-<span id="L74" rel="#L74">74</span>
-<span id="L75" rel="#L75">75</span>
-<span id="L76" rel="#L76">76</span>
-<span id="L77" rel="#L77">77</span>
-<span id="L78" rel="#L78">78</span>
-<span id="L79" rel="#L79">79</span>
-<span id="L80" rel="#L80">80</span>
-<span id="L81" rel="#L81">81</span>
-<span id="L82" rel="#L82">82</span>
-<span id="L83" rel="#L83">83</span>
-<span id="L84" rel="#L84">84</span>
-<span id="L85" rel="#L85">85</span>
-<span id="L86" rel="#L86">86</span>
-<span id="L87" rel="#L87">87</span>
-<span id="L88" rel="#L88">88</span>
-<span id="L89" rel="#L89">89</span>
-<span id="L90" rel="#L90">90</span>
-<span id="L91" rel="#L91">91</span>
-<span id="L92" rel="#L92">92</span>
-<span id="L93" rel="#L93">93</span>
-<span id="L94" rel="#L94">94</span>
-<span id="L95" rel="#L95">95</span>
-<span id="L96" rel="#L96">96</span>
-<span id="L97" rel="#L97">97</span>
-<span id="L98" rel="#L98">98</span>
-<span id="L99" rel="#L99">99</span>
-<span id="L100" rel="#L100">100</span>
-<span id="L101" rel="#L101">101</span>
-<span id="L102" rel="#L102">102</span>
-<span id="L103" rel="#L103">103</span>
-<span id="L104" rel="#L104">104</span>
-<span id="L105" rel="#L105">105</span>
-<span id="L106" rel="#L106">106</span>
-<span id="L107" rel="#L107">107</span>
-<span id="L108" rel="#L108">108</span>
-<span id="L109" rel="#L109">109</span>
-<span id="L110" rel="#L110">110</span>
-<span id="L111" rel="#L111">111</span>
-<span id="L112" rel="#L112">112</span>
-<span id="L113" rel="#L113">113</span>
-<span id="L114" rel="#L114">114</span>
-<span id="L115" rel="#L115">115</span>
-<span id="L116" rel="#L116">116</span>
-<span id="L117" rel="#L117">117</span>
-<span id="L118" rel="#L118">118</span>
-<span id="L119" rel="#L119">119</span>
-<span id="L120" rel="#L120">120</span>
-<span id="L121" rel="#L121">121</span>
-<span id="L122" rel="#L122">122</span>
-<span id="L123" rel="#L123">123</span>
-<span id="L124" rel="#L124">124</span>
-<span id="L125" rel="#L125">125</span>
-<span id="L126" rel="#L126">126</span>
-<span id="L127" rel="#L127">127</span>
-<span id="L128" rel="#L128">128</span>
-<span id="L129" rel="#L129">129</span>
-<span id="L130" rel="#L130">130</span>
-<span id="L131" rel="#L131">131</span>
-<span id="L132" rel="#L132">132</span>
-<span id="L133" rel="#L133">133</span>
-<span id="L134" rel="#L134">134</span>
-<span id="L135" rel="#L135">135</span>
-<span id="L136" rel="#L136">136</span>
-<span id="L137" rel="#L137">137</span>
-<span id="L138" rel="#L138">138</span>
-<span id="L139" rel="#L139">139</span>
-<span id="L140" rel="#L140">140</span>
-<span id="L141" rel="#L141">141</span>
-<span id="L142" rel="#L142">142</span>
-<span id="L143" rel="#L143">143</span>
-<span id="L144" rel="#L144">144</span>
-<span id="L145" rel="#L145">145</span>
-<span id="L146" rel="#L146">146</span>
-<span id="L147" rel="#L147">147</span>
-<span id="L148" rel="#L148">148</span>
-<span id="L149" rel="#L149">149</span>
-<span id="L150" rel="#L150">150</span>
-<span id="L151" rel="#L151">151</span>
-<span id="L152" rel="#L152">152</span>
-<span id="L153" rel="#L153">153</span>
-<span id="L154" rel="#L154">154</span>
-<span id="L155" rel="#L155">155</span>
-<span id="L156" rel="#L156">156</span>
-<span id="L157" rel="#L157">157</span>
-<span id="L158" rel="#L158">158</span>
-<span id="L159" rel="#L159">159</span>
-<span id="L160" rel="#L160">160</span>
-<span id="L161" rel="#L161">161</span>
-<span id="L162" rel="#L162">162</span>
-<span id="L163" rel="#L163">163</span>
-<span id="L164" rel="#L164">164</span>
-<span id="L165" rel="#L165">165</span>
-<span id="L166" rel="#L166">166</span>
-<span id="L167" rel="#L167">167</span>
-<span id="L168" rel="#L168">168</span>
-<span id="L169" rel="#L169">169</span>
-<span id="L170" rel="#L170">170</span>
-<span id="L171" rel="#L171">171</span>
-<span id="L172" rel="#L172">172</span>
-<span id="L173" rel="#L173">173</span>
-<span id="L174" rel="#L174">174</span>
-<span id="L175" rel="#L175">175</span>
-<span id="L176" rel="#L176">176</span>
-<span id="L177" rel="#L177">177</span>
-<span id="L178" rel="#L178">178</span>
-<span id="L179" rel="#L179">179</span>
-<span id="L180" rel="#L180">180</span>
-<span id="L181" rel="#L181">181</span>
-<span id="L182" rel="#L182">182</span>
-<span id="L183" rel="#L183">183</span>
-<span id="L184" rel="#L184">184</span>
-<span id="L185" rel="#L185">185</span>
-<span id="L186" rel="#L186">186</span>
-<span id="L187" rel="#L187">187</span>
-<span id="L188" rel="#L188">188</span>
-<span id="L189" rel="#L189">189</span>
-<span id="L190" rel="#L190">190</span>
-<span id="L191" rel="#L191">191</span>
-<span id="L192" rel="#L192">192</span>
-<span id="L193" rel="#L193">193</span>
-<span id="L194" rel="#L194">194</span>
-<span id="L195" rel="#L195">195</span>
-<span id="L196" rel="#L196">196</span>
-<span id="L197" rel="#L197">197</span>
-<span id="L198" rel="#L198">198</span>
-<span id="L199" rel="#L199">199</span>
-<span id="L200" rel="#L200">200</span>
-<span id="L201" rel="#L201">201</span>
-<span id="L202" rel="#L202">202</span>
-<span id="L203" rel="#L203">203</span>
-<span id="L204" rel="#L204">204</span>
-<span id="L205" rel="#L205">205</span>
-<span id="L206" rel="#L206">206</span>
-<span id="L207" rel="#L207">207</span>
-<span id="L208" rel="#L208">208</span>
-<span id="L209" rel="#L209">209</span>
-<span id="L210" rel="#L210">210</span>
-<span id="L211" rel="#L211">211</span>
-<span id="L212" rel="#L212">212</span>
-<span id="L213" rel="#L213">213</span>
-<span id="L214" rel="#L214">214</span>
-<span id="L215" rel="#L215">215</span>
-<span id="L216" rel="#L216">216</span>
-<span id="L217" rel="#L217">217</span>
-<span id="L218" rel="#L218">218</span>
-<span id="L219" rel="#L219">219</span>
-<span id="L220" rel="#L220">220</span>
-<span id="L221" rel="#L221">221</span>
-<span id="L222" rel="#L222">222</span>
-<span id="L223" rel="#L223">223</span>
-<span id="L224" rel="#L224">224</span>
-<span id="L225" rel="#L225">225</span>
-<span id="L226" rel="#L226">226</span>
-<span id="L227" rel="#L227">227</span>
-<span id="L228" rel="#L228">228</span>
-<span id="L229" rel="#L229">229</span>
-<span id="L230" rel="#L230">230</span>
-<span id="L231" rel="#L231">231</span>
-<span id="L232" rel="#L232">232</span>
-<span id="L233" rel="#L233">233</span>
-<span id="L234" rel="#L234">234</span>
-<span id="L235" rel="#L235">235</span>
-<span id="L236" rel="#L236">236</span>
-<span id="L237" rel="#L237">237</span>
-<span id="L238" rel="#L238">238</span>
-<span id="L239" rel="#L239">239</span>
-<span id="L240" rel="#L240">240</span>
-<span id="L241" rel="#L241">241</span>
-<span id="L242" rel="#L242">242</span>
-<span id="L243" rel="#L243">243</span>
-<span id="L244" rel="#L244">244</span>
-<span id="L245" rel="#L245">245</span>
-<span id="L246" rel="#L246">246</span>
-<span id="L247" rel="#L247">247</span>
-<span id="L248" rel="#L248">248</span>
-<span id="L249" rel="#L249">249</span>
-<span id="L250" rel="#L250">250</span>
-<span id="L251" rel="#L251">251</span>
-<span id="L252" rel="#L252">252</span>
-<span id="L253" rel="#L253">253</span>
-<span id="L254" rel="#L254">254</span>
-<span id="L255" rel="#L255">255</span>
-<span id="L256" rel="#L256">256</span>
-<span id="L257" rel="#L257">257</span>
-<span id="L258" rel="#L258">258</span>
-<span id="L259" rel="#L259">259</span>
-<span id="L260" rel="#L260">260</span>
-<span id="L261" rel="#L261">261</span>
-<span id="L262" rel="#L262">262</span>
-<span id="L263" rel="#L263">263</span>
-<span id="L264" rel="#L264">264</span>
-<span id="L265" rel="#L265">265</span>
-<span id="L266" rel="#L266">266</span>
-<span id="L267" rel="#L267">267</span>
-<span id="L268" rel="#L268">268</span>
-<span id="L269" rel="#L269">269</span>
-<span id="L270" rel="#L270">270</span>
-<span id="L271" rel="#L271">271</span>
-<span id="L272" rel="#L272">272</span>
-
-          </td>
-          <td class="blob-line-code">
-                  <div class="highlight"><pre><div class='line' id='LC1'><span class="cp">&lt;!DOCTYPE html&gt;</span></div><div class='line' id='LC2'><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC3'>&nbsp;&nbsp;<span class="nt">&lt;head&gt;</span></div><div class='line' id='LC4'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC5'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC6'>&nbsp;&nbsp;&nbsp;<span class="nt">&lt;title&gt;</span>My First Bitstarter<span class="nt">&lt;/title&gt;</span></div><div class='line' id='LC7'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC8'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css&quot;</span><span class="nt">&gt;</span>    </div><div class='line' id='LC9'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></div><div class='line' id='LC10'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></div><div class='line' id='LC11'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC12'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800&quot;</span> </div><div class='line' id='LC13'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC14'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;style </span><span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC15'><br/></div><div class='line' id='LC16'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">/* Large desktop */</span></div><div class='line' id='LC17'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">980px</span><span class="o">)</span> <span class="p">{</span> </div><div class='line' id='LC18'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">body</span> <span class="p">{</span></div><div class='line' id='LC19'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">padding-top</span><span class="o">:</span> <span class="m">60px</span><span class="p">;</span></div><div class='line' id='LC20'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC21'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nc">.linediv-l</span> <span class="p">{</span></div><div class='line' id='LC22'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">border-right</span><span class="o">:</span> <span class="m">1px</span> <span class="nb">white</span> <span class="k">solid</span><span class="p">;</span></div><div class='line' id='LC23'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC24'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nc">.linediv-r</span> <span class="p">{</span></div><div class='line' id='LC25'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">border-left</span><span class="o">:</span> <span class="m">1px</span> <span class="nb">white</span> <span class="k">solid</span><span class="p">;</span></div><div class='line' id='LC26'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC27'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC28'><br/></div><div class='line' id='LC29'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">/* Landscape phones and down */</span></div><div class='line' id='LC30'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">@media</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">480px</span><span class="o">)</span> <span class="p">{</span> </div><div class='line' id='LC31'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nc">.copy</span> <span class="p">{</span></div><div class='line' id='LC32'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">padding</span><span class="o">:</span> <span class="m">2</span><span class="o">.</span><span class="m">5</span><span class="o">%</span> <span class="m">10</span><span class="o">%</span><span class="p">;</span></div><div class='line' id='LC33'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC34'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nc">.linediv-l</span> <span class="p">{</span></div><div class='line' id='LC35'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">border-bottom</span><span class="o">:</span> <span class="m">1px</span> <span class="nb">white</span> <span class="k">solid</span><span class="p">;</span></div><div class='line' id='LC36'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC37'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nc">.linediv-r</span> <span class="p">{</span></div><div class='line' id='LC38'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">border-top</span><span class="o">:</span> <span class="m">1px</span> <span class="nb">white</span> <span class="k">solid</span><span class="p">;</span></div><div class='line' id='LC39'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC40'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC41'><br/></div><div class='line' id='LC42'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">/* All form factors */</span></div><div class='line' id='LC43'><br/></div><div class='line' id='LC44'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">/* Main body and headings */</span></div><div class='line' id='LC45'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">body</span><span class="p">{</span></div><div class='line' id='LC46'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">font-family</span><span class="o">:</span> <span class="s1">&#39;Open Sans&#39;</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span></div><div class='line' id='LC47'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC48'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nc">.heading</span><span class="o">,</span> <span class="nc">.subheading</span> <span class="p">{</span></div><div class='line' id='LC49'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">font-family</span><span class="o">:</span> <span class="s1">&#39;Ubuntu&#39;</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span></div><div class='line' id='LC50'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span></div><div class='line' id='LC51'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC52'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">p</span><span class="nc">.lead</span> <span class="p">{</span></div><div class='line' id='LC53'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">padding-top</span><span class="o">:</span> <span class="m">1</span><span class="o">.</span><span class="m">5</span><span class="o">%</span><span class="p">;</span></div><div class='line' id='LC54'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">font-size</span><span class="o">:</span> <span class="m">24px</span><span class="p">;</span></div><div class='line' id='LC55'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">line-height</span><span class="o">:</span> <span class="m">30px</span><span class="p">;</span></div><div class='line' id='LC56'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC57'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">p</span> <span class="p">{</span></div><div class='line' id='LC58'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">font-size</span><span class="o">:</span> <span class="m">18px</span><span class="p">;</span></div><div class='line' id='LC59'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">line-height</span><span class="o">:</span> <span class="m">24px</span><span class="p">;</span></div><div class='line' id='LC60'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC61'><br/></div><div class='line' id='LC62'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">/* Video pitch and Action */</span></div><div class='line' id='LC63'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nc">.pitch</span> <span class="p">{</span></div><div class='line' id='LC64'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">padding</span><span class="o">:</span> <span class="m">2</span><span class="o">.</span><span class="m">5</span><span class="o">%</span> <span class="m">0</span><span class="o">%</span><span class="p">;</span></div><div class='line' id='LC65'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC66'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nc">.order</span> <span class="p">{</span></div><div class='line' id='LC67'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">padding</span><span class="o">:</span> <span class="m">2</span><span class="o">%</span> <span class="m">0</span><span class="o">%</span><span class="p">;</span></div><div class='line' id='LC68'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC69'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nc">.actions</span> <span class="p">{</span></div><div class='line' id='LC70'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">background-color</span><span class="o">:</span> <span class="m">#343434</span><span class="p">;</span></div><div class='line' id='LC71'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">padding</span><span class="o">:</span> <span class="m">3</span><span class="o">%</span> <span class="m">0</span><span class="o">%</span><span class="p">;</span></div><div class='line' id='LC72'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC73'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nc">.video</span><span class="o">,</span> <span class="nc">.thermometer</span><span class="o">,</span> <span class="nc">.order</span><span class="o">,</span> <span class="nc">.social</span><span class="o">,</span> <span class="nc">.statistics</span> <span class="p">{</span></div><div class='line' id='LC74'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span></div><div class='line' id='LC75'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC76'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nc">.statistics</span> <span class="nt">h3</span><span class="o">,</span> <span class="nc">.statistics</span> <span class="nt">p</span> <span class="p">{</span></div><div class='line' id='LC77'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span></div><div class='line' id='LC78'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC79'><br/></div><div class='line' id='LC80'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">/* Marketing Copy and Footer */</span></div><div class='line' id='LC81'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nc">.copy</span> <span class="p">{</span></div><div class='line' id='LC82'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">padding-top</span><span class="o">:</span> <span class="m">2</span><span class="o">.</span><span class="m">5</span><span class="o">%</span><span class="p">;</span></div><div class='line' id='LC83'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">padding-bottom</span><span class="o">:</span> <span class="m">2</span><span class="o">.</span><span class="m">5</span><span class="o">%</span><span class="p">;</span></div><div class='line' id='LC84'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">text-align</span><span class="o">:</span> <span class="k">justify</span><span class="p">;</span></div><div class='line' id='LC85'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC86'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nc">.asset</span> <span class="p">{</span></div><div class='line' id='LC87'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">padding</span><span class="o">:</span> <span class="m">2</span><span class="o">.</span><span class="m">5</span><span class="o">%</span> <span class="m">0</span><span class="o">%</span><span class="p">;</span></div><div class='line' id='LC88'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC89'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nc">.footer</span> <span class="p">{</span></div><div class='line' id='LC90'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">color</span><span class="o">:</span> <span class="m">#cccccc</span><span class="p">;</span></div><div class='line' id='LC91'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span></div><div class='line' id='LC92'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC93'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nc">.footer</span> <span class="nt">p</span> <span class="p">{</span></div><div class='line' id='LC94'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">font-size</span><span class="o">:</span> <span class="m">11px</span><span class="p">;</span></div><div class='line' id='LC95'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC96'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nc">.footer</span> <span class="nt">a</span> <span class="p">{</span></div><div class='line' id='LC97'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">color</span><span class="o">:</span> <span class="m">#ccccff</span><span class="p">;</span></div><div class='line' id='LC98'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC99'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/style&gt;</span></div><div class='line' id='LC100'>&nbsp;&nbsp;<span class="nt">&lt;/head&gt;</span></div><div class='line' id='LC101'>&nbsp;&nbsp;<span class="nt">&lt;body&gt;</span></div><div class='line' id='LC102'><br/></div><div class='line' id='LC103'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- Mobile-friendly navbar adapted from example. --&gt;</span></div><div class='line' id='LC104'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- http://twitter.github.io/bootstrap/examples/starter-template.html --&gt;</span></div><div class='line' id='LC105'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-inverse navbar-fixed-top&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC106'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navbar-inner&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC107'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC108'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-navbar&quot;</span></div><div class='line' id='LC109'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;.nav-collapse&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC110'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span></div><div class='line' id='LC111'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span></div><div class='line' id='LC112'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span></div><div class='line' id='LC113'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/button&gt;</span></div><div class='line' id='LC114'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Bitstarter<span class="nt">&lt;/a&gt;</span></div><div class='line' id='LC115'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;nav-collapse collapse&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC116'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC117'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span></div><div class='line' id='LC118'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#about&quot;</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;&lt;/li&gt;</span></div><div class='line' id='LC119'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#contact&quot;</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;&lt;/li&gt;</span></div><div class='line' id='LC120'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/ul&gt;</span></div><div class='line' id='LC121'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!--/.nav-collapse --&gt;</span></div><div class='line' id='LC122'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC123'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC124'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC125'><br/></div><div class='line' id='LC126'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- We use row-fluid inside containers to achieve a resizable layout. --&gt;</span></div><div class='line' id='LC127'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ --&gt;</span></div><div class='line' id='LC128'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- http://stackoverflow.com/a/12270322 --&gt;</span></div><div class='line' id='LC129'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC130'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- Font and paired font of .heading/.subheading and body from Google Fonts --&gt;</span></div><div class='line' id='LC131'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- www.google.com/fonts/specimen/Ubuntu --&gt;</span></div><div class='line' id='LC132'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- www.google.com/fonts/specimen/Ubuntu#pairings --&gt;</span></div><div class='line' id='LC133'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-fluid heading&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC134'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span12&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC135'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;h1&gt;</span>The Thought Machine<span class="nt">&lt;/h1&gt;</span></div><div class='line' id='LC136'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC137'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span> </div><div class='line' id='LC138'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-fluid subheading&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC139'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span12&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC140'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- Special typography from Bootstrap for lead paragraph. --&gt;</span></div><div class='line' id='LC141'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- http://twitter.github.io/bootstrap/base-css.html#typography --&gt;</span></div><div class='line' id='LC142'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;lead&quot;</span><span class="nt">&gt;</span>Read minds.  Watch thoughts.<span class="nt">&lt;/p&gt;</span></div><div class='line' id='LC143'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC144'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC145'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-fluid pitch&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC146'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span5 offset1 video&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC147'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;img-circle&quot;</span> <span class="na">src=</span><span class="s">&quot;./img/screenshot.png&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC148'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC149'><br/></div><div class='line' id='LC150'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- We define a new &#39;actions&#39; div to contain statistics, order, and share buttons.--&gt;</span></div><div class='line' id='LC151'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span5 actions&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC152'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span8 offset2&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC153'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;statistics&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC154'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span4&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC155'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- linediv-l and linediv-r give dividing lines that look</span></div><div class='line' id='LC156'><span class="c">                different in horizontal and vertical layouts, illustrating</span></div><div class='line' id='LC157'><span class="c">                media queries. --&gt;</span></div><div class='line' id='LC158'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;linediv-l&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC159'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;h3&gt;</span>1000<span class="nt">&lt;/h3&gt;</span> <span class="nt">&lt;p&gt;</span>backers<span class="nt">&lt;/p&gt;</span></div><div class='line' id='LC160'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC161'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC162'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span4&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC163'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;linediv-c&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC164'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;h3&gt;</span>$6000<span class="nt">&lt;/h3&gt;</span> <span class="nt">&lt;p&gt;</span>of $10,000<span class="nt">&lt;/p&gt;</span></div><div class='line' id='LC165'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC166'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC167'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span4&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC168'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;linediv-r&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC169'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;h3&gt;</span>10<span class="nt">&lt;/h3&gt;</span> <span class="nt">&lt;p&gt;</span>days left<span class="nt">&lt;/p&gt;</span></div><div class='line' id='LC170'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC171'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC172'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC173'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC174'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span10 offset1&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC175'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- Bootstrap progress bar --&gt;</span></div><div class='line' id='LC176'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- http://twitter.github.io/bootstrap/components.html#progress --&gt;</span></div><div class='line' id='LC177'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;thermometer progress active&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC178'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;bar bar-success&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 60%;&quot;</span><span class="nt">&gt;&lt;/div&gt;</span></div><div class='line' id='LC179'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;bar bar-warning&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 40%;&quot;</span><span class="nt">&gt;&lt;/div&gt;</span></div><div class='line' id='LC180'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC181'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC182'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span6 offset3 order&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC183'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- Standard Bootstrap button. --&gt;</span></div><div class='line' id='LC184'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- http://twitter.github.io/bootstrap/base-css.html#buttons --&gt;</span></div><div class='line' id='LC185'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-success btn-large&quot;</span><span class="nt">&gt;</span>Preorder<span class="nt">&lt;/button&gt;</span></div><div class='line' id='LC186'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC187'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span8 offset2 social&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC188'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- Social buttons are not included in default Bootstrap. --&gt;</span></div><div class='line' id='LC189'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- See: http://noizwaves.github.io/bootstrap-social-buttons --&gt;</span></div><div class='line' id='LC190'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-twitter&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-twitter&quot;</span><span class="nt">&gt;&lt;/i&gt;</span> | Twitter<span class="nt">&lt;/button&gt;</span></div><div class='line' id='LC191'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-facebook&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-facebook&quot;</span><span class="nt">&gt;&lt;/i&gt;</span> | Facebook<span class="nt">&lt;/button&gt;</span></div><div class='line' id='LC192'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC193'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC194'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC195'><br/></div><div class='line' id='LC196'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- Beyond this part the marketing copy begins. --&gt;</span></div><div class='line' id='LC197'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align --&gt;</span></div><div class='line' id='LC198'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- http://twitter.github.io/bootstrap/base-css.html#images --&gt;</span></div><div class='line' id='LC199'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- http://placehold.it --&gt;</span></div><div class='line' id='LC200'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-fluid section1&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC201'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span5 offset1 asset&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC202'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;img-circle&quot;</span> <span class="na">src=</span><span class="s">&quot;./img/baby.jpg&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC203'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC204'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span5 copy&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC205'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;p&gt;</span></div><div class='line' id='LC206'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ever wished you could get a visual of what your baby or toddler is trying to tell you? Or of what your wife is sulking about that she would not want to discuss with you? Or that there is a way to share your thoughts that you could not put into words? Or see what someone is dreaming about? You get the idea, and the list goes on.</div><div class='line' id='LC207'>	    The wait is almost over.  The Thought Machine is here to come.   <span class="nt">&lt;/p&gt;</span></div><div class='line' id='LC208'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC209'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC210'><br/></div><div class='line' id='LC211'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-fluid section2&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC212'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span5 offset1 copy copy-right&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC213'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;p&gt;</span></div><div class='line' id='LC214'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/p&gt;</span></div><div class='line' id='LC215'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC216'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span5 asset&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC217'><span class="c">&lt;!--          &lt;img class=&quot;img-polaroid&quot; src=&quot;http://placehold.it/480x300&quot;&gt; --&gt;</span></div><div class='line' id='LC218'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC219'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC220'><br/></div><div class='line' id='LC221'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- For the FAQ, we introduce a little bit of JS, using the accordion. --&gt;</span></div><div class='line' id='LC222'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- This brings in jquery.js and bootstrap.js as dependencies. --&gt;</span></div><div class='line' id='LC223'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- http://twitter.github.io/bootstrap/javascript.html#collapse --&gt;</span></div><div class='line' id='LC224'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-fluid faq&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC225'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span10 offset1&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC226'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;h3&gt;</span>FAQ<span class="nt">&lt;/h3&gt;</span></div><div class='line' id='LC227'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion&quot;</span> <span class="na">id=</span><span class="s">&quot;accordion2&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC228'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-group&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC229'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-heading&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC230'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;accordion-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span></div><div class='line' id='LC231'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="na">data-parent=</span><span class="s">&quot;#accordion2&quot;</span> <span class="na">href=</span><span class="s">&quot;#collapseOne&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC232'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What does FAQ stand for?</div><div class='line' id='LC233'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/a&gt;</span></div><div class='line' id='LC234'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC235'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;collapseOne&quot;</span> <span class="na">class=</span><span class="s">&quot;accordion-body collapse&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC236'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-inner&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC237'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Frequently Asked Question.</div><div class='line' id='LC238'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC239'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC240'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC241'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-group&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC242'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-heading&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC243'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;accordion-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span></div><div class='line' id='LC244'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="na">data-parent=</span><span class="s">&quot;#accordion2&quot;</span> <span class="na">href=</span><span class="s">&quot;#collapseTwo&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC245'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What&#39;s a Frequently Asked Question?</div><div class='line' id='LC246'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/a&gt;</span></div><div class='line' id='LC247'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC248'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;collapseTwo&quot;</span> <span class="na">class=</span><span class="s">&quot;accordion-body collapse&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC249'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-inner&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC250'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A question which is commonly asked by users.</div><div class='line' id='LC251'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC252'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC253'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC254'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC255'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC256'><br/></div><div class='line' id='LC257'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC258'><br/></div><div class='line' id='LC259'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- Not crucial, but we put this under a CC By-SA 3.0 license. --&gt;</span></div><div class='line' id='LC260'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">&lt;!-- http://creativecommons.org/licenses/ --&gt;</span></div><div class='line' id='LC261'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-fluid footer&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC262'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span12&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC263'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;p&gt;</span>This work is licensed under</div><div class='line' id='LC264'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://creativecommons.org/licenses/by-sa/3.0/&quot;</span><span class="nt">&gt;</span>CC</div><div class='line' id='LC265'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By-SA 3.0</div><div class='line' id='LC266'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/a&gt;</span>, without all the cruft that would otherwise be</div><div class='line' id='LC267'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;put at the bottom of the page.<span class="nt">&lt;/p&gt;</span></div><div class='line' id='LC268'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC269'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC270'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;/div&gt;</span></div><div class='line' id='LC271'>&nbsp;&nbsp;<span class="nt">&lt;/body&gt;</span></div><div class='line' id='LC272'><span class="nt">&lt;/html&gt;</span></div></pre></div>
-          </td>
-        </tr>
-      </table>
-  </div>
-
-  </div>
-</div>
-
-<a href="#jump-to-line" rel="facebox[.linejump]" data-hotkey="l" class="js-jump-to-line" style="display:none">Jump to Line</a>
-<div id="jump-to-line" style="display:none">
-  <form accept-charset="UTF-8" class="js-jump-to-line-form">
-    <input class="linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" autofocus>
-    <button type="submit" class="button">Go</button>
-  </form>
-</div>
-
+      <div class="row-fluid pitch">
+        <div class="span5 offset1 video">
+          <img class="img-polaroid" alt="Placeholder" src="http://placehold.it/480x300">
         </div>
 
-      </div><!-- /.repo-container -->
-      <div class="modal-backdrop"></div>
-    </div><!-- /.container -->
-  </div><!-- /.site -->
-
-
-    </div><!-- /.wrapper -->
-
-      <div class="container">
-  <div class="site-footer">
-    <ul class="site-footer-links right">
-      <li><a href="https://status.github.com/">Status</a></li>
-      <li><a href="http://developer.github.com">API</a></li>
-      <li><a href="http://training.github.com">Training</a></li>
-      <li><a href="http://shop.github.com">Shop</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/about">About</a></li>
-
-    </ul>
-
-    <a href="/">
-      <span class="mega-octicon octicon-mark-github"></span>
-    </a>
-
-    <ul class="site-footer-links">
-      <li>&copy; 2013 <span title="0.07057s from fe13.rs.github.com">GitHub</span>, Inc.</li>
-        <li><a href="/site/terms">Terms</a></li>
-        <li><a href="/site/privacy">Privacy</a></li>
-        <li><a href="/security">Security</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
-  </div><!-- /.site-footer -->
-</div><!-- /.container -->
-
-
-    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
-  <div class="fullscreen-container js-fullscreen-container">
-    <div class="textarea-wrap">
-      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
-          <div class="suggester-container">
-              <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester"
-                 data-url="/jcentino/bitstarter/suggestions/commit">
+        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
+        <div class="span5 actions">
+          <div class="row-fluid">
+          <div class="span8 offset2">
+            <div class="row-fluid statistics">
+              <div class="span4">
+                <!-- linediv-l and linediv-r give dividing lines that look
+                different in horizontal and vertical layouts, illustrating
+                media queries. -->
+                <div class="linediv-l">
+                <h3>1000</h3> <p>backers</p>
+                </div>
               </div>
+              <div class="span4">
+                <div class="linediv-c">
+                  <h3>$6000</h3> <p>of $10,000</p>
+                </div>
+              </div>
+              <div class="span4">
+                <div class="linediv-r">
+                <h3>10</h3> <p>days left</p>
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="row-fluid">
+          <div class="span10 offset1">
+            <!-- Bootstrap progress bar -->
+            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
+            <div class="thermometer progress active">
+              <div class="bar bar-success" style="width: 60%;"></div>
+              <div class="bar bar-warning" style="width: 40%;"></div>
+            </div>
+          </div>
+          </div>
+          <div class="row-fluid">
+          <div class="span6 offset3 order">
+            <!-- Standard Bootstrap button. -->
+            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
+            <button class="btn btn-success btn-large">Preorder</button>
+          </div>
+          </div>
+          <div class="row-fluid">
+          <div class="span8 offset2 social">
+            <!-- Social buttons are not included in default Bootstrap. -->
+            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
+            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+          </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- Beyond this part the marketing copy begins. -->
+      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
+      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
+      <!-- http://placehold.it -->
+      <div class="row-fluid section1">
+        <div class="span5 offset1 asset">
+          <img class="img-polaroid"  alt="Placeholder" src="http://placehold.it/480x300">
+        </div>
+        <div class="span5 copy">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
+            mollis justo velit at nunc. Fusce nec egestas sem. Donec
+            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
+            volutpat lorem ut congue malesuada. In facilisis scelerisque
+            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
+            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
+            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
+            rutrum, nunc leo tempus nisl, eu mollis justo velit at
+            nunc. Fusce nec egestas sem. Donec fringilla.
+          </p>
+        </div>
+      </div>
+
+      <div class="row-fluid section2">
+        <div class="span5 offset1 copy copy-right">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
+            mollis justo velit at nunc. Fusce nec egestas sem. Donec
+            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
+            volutpat lorem ut congue malesuada. In facilisis scelerisque
+            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
+            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
+            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
+            rutrum, nunc leo tempus nisl, eu mollis justo velit at
+            nunc. Fusce nec egestas sem. Donec fringilla.
+          </p>
+        </div>
+        <div class="span5 asset">
+          <img class="img-polaroid"  alt="Placeholder" src="http://placehold.it/480x300">
+        </div>
+      </div>
+
+      <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
+      <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
+      <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
+      <div class="row-fluid faq">
+          <div class="span10 offset1">
+            <h3>FAQ</h3>
+            <div class="accordion" id="accordion2">
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                     data-parent="#accordion2" href="#collapseOne">
+                    What does FAQ stand for?
+                  </a>
+                </div>
+                <div id="collapseOne" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                    Frequently Asked Question.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                     data-parent="#accordion2" href="#collapseTwo">
+                    What's a Frequently Asked Question?
+                  </a>
+                </div>
+                <div id="collapseTwo" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                    A question which is commonly asked by users.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+      <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
+      <!-- http://creativecommons.org/licenses/ -->
+      <div class="row-fluid footer">
+        <div class="span12">
+          <p>This work is licensed under
+            the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
+              By-SA 3.0
+            </a>, without all the cruft that would otherwise be
+            put at the bottom of the page.</p>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="fullscreen-sidebar">
-    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped leftwards" title="Exit Zen Mode">
-      <span class="mega-octicon octicon-screen-normal"></span>
-    </a>
-    <a href="#" class="theme-switcher js-theme-switcher tooltipped leftwards"
-      title="Switch themes">
-      <span class="octicon octicon-color-mode"></span>
-    </a>
-  </div>
-</div>
-
-
-
-    <div id="ajax-error-message" class="flash flash-error">
-      <span class="octicon octicon-alert"></span>
-      <a href="#" class="octicon octicon-remove-close close ajax-error-dismiss"></a>
-      Something went wrong with that request. Please try again.
-    </div>
-
-    
   </body>
 </html>
-
